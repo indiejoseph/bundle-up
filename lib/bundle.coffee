@@ -123,7 +123,7 @@ class Bundle
 
       str = @minify(str)
       hash = crypto.createHash('md5').update(str).digest('hex')
-      filepath = "#{@options.staticRoot}/generated/bundle/#{hash.substring(0, 7)}_#{namespace}#{@fileExtension}"
+      filepath = "#{@options.staticRoot}/generated/#{hash.substring(0, 7)}_#{namespace}#{@fileExtension}"
 
       writeToFile(filepath, str)
 
